@@ -8,17 +8,22 @@ Utilisation de chocolatey : https://github.com/openai/whisper
 ```
 choco install ffmpeg-full
 ```
-Puis place le `ffmpeg.exe` dans <i>C:\Windows\System32</i>
+Puis placer le fichier `ffmpeg.exe` dans <i>C:\Windows\System32</i>
 
 ###Installation des modules :
 ```
 pip install -r requirements.txt
 ```
 ## Utilisation
+Placez les fichiers audios à retranscrire dans le dossier ``audios``. Des fichiers d'exemple sont déjà présents dans le dossier. N'oubliez pas de les supprimer.
+
+Lancez le programme via :
 ````commandline
 python main.py
 ````
+Choissisez le modèle. Plus le modèle est rapide, moins il est précis dans sa transcription.
 
+Une fois la transcription terminée, les fichiers .txt de chaque fichiers audios se trouvent dans le dossier ```resultats```.
 ### Si erreur utilisation GPU
 Commencer par désinstaller torch puis installer cuda-python
 ````commandline
