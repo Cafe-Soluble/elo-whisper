@@ -11,9 +11,10 @@ def transcription(filename_audio, directory, modelSize):
     with open("resultats/" + filename_audio+'.txt', 'w') as f:
         f.write(result['text'])
 
+
 inputUser = False
 modelSize = False
-while inputUser == False:
+while inputUser is False:
     inputUser = True
     print("X pour quitter")
     print("Choisissez le modèle :")
@@ -41,12 +42,13 @@ while inputUser == False:
     elif inputUser == 'x':
         print("Bye !")
     else:
-        inputUser == False
+        inputUser = False
 
-if modelSize != False:
+if modelSize is not False:
     directory = 'audios/'
     audio_list = os.listdir(directory)
     timeStartGlobal = time.time()
+    print('-------------------------------')
     for file_name in audio_list:
         timeStart = time.time()
         print("Début transcription [" + file_name + "] ... ", end='')
@@ -61,8 +63,10 @@ if modelSize != False:
 
     timeEndGlobal = time.time()
     timeDoneGlobal = round((timeEndGlobal-timeStartGlobal)/60)
-    print('Temps total de traitement : ' + str(timeDoneGlobal) + ' minutes.')
+    print('-------------------------------')
     print(">>> Transcription des fichiers terminée.")
+    print('Durée totale de traitement : ' + str(timeDoneGlobal) + ' minutes.')
+
     playsound('bin/pop.mp3')
 
 
