@@ -4,7 +4,7 @@ import whisper
 from playsound import playsound
 import time
 
-
+print("Démarrage ...")
 def transcription(filename_audio, directory, modelSize):
     model = whisper.load_model(modelSize)
     result = model.transcribe(directory+filename_audio, fp16=True, language='French')
@@ -16,13 +16,13 @@ inputUser = False
 modelSize = False
 while inputUser is False:
     inputUser = True
-    print("X pour quitter")
+    print("[X] pour quitter")
     print("Choisissez le modèle :")
-    print("1. Tiny - Relative speed ~32x")
-    print("2. Base - Relative speed ~16x")
-    print("3. Small - Relative speed ~6x")
-    print("4. Medium - Relative speed ~2x")
-    print("5. Large - Relative speed ~1x")
+    print("[1] Tiny - Relative speed ~32x")
+    print("[2] Base - Relative speed ~16x")
+    print("[3]. Small - Relative speed ~6x")
+    print("[4] Medium - Relative speed ~2x")
+    print("[5] Large - Relative speed ~1x")
     inputUser = input("Choix : ")
     if inputUser == '1':
         modelSize = 'tiny'
@@ -64,7 +64,7 @@ if modelSize is not False:
     timeEndGlobal = time.time()
     timeDoneGlobal = round((timeEndGlobal-timeStartGlobal)/60)
     print('-------------------------------')
-    print(">>> Transcription des fichiers terminée.")
+    print("> Transcription des fichiers terminée.")
     print('Durée totale de traitement : ' + str(timeDoneGlobal) + ' minutes.')
 
     playsound('bin/pop.mp3')
