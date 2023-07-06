@@ -32,7 +32,7 @@ pip cache purge
 pip install cuda-python
 ````
 Puis installer Pytorch en choisissant la version ici : https://pytorch.org/ (dans la section INSTALL PYTORCH)
-Exemple : :
+Exemple : 
 ````commandline
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ````
