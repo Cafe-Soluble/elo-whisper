@@ -15,7 +15,7 @@ Puis placer le fichier `ffmpeg.exe` dans <i>C:\Windows\System32</i>
 pip install -r requirements.txt
 ```
 ## Utilisation
-Placez les fichiers audios à retranscrire dans le dossier ``audios``. Des fichiers d'exemple sont déjà présents dans le dossier. N'oubliez pas de les supprimer.
+Placez les fichiers audios à retranscrire dans le dossier ``audios``. Des fichiers audios d'exemple sont disponibles dans le dossier ``audio_samples``.
 
 Lancez le programme via :
 ````commandline
